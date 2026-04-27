@@ -9,6 +9,7 @@ import com.jadeilton.bff.agendador_tarefas.business.dto.in.UsuarioDTORequest;
 import com.jadeilton.bff.agendador_tarefas.business.dto.out.EnderecoDTOResponse;
 import com.jadeilton.bff.agendador_tarefas.business.dto.out.TelefoneDTOResponse;
 import com.jadeilton.bff.agendador_tarefas.business.dto.out.UsuarioDTOResponse;
+import com.jadeilton.bff.agendador_tarefas.business.dto.out.ViaCepDTOResponse;
 import com.jadeilton.bff.agendador_tarefas.infrastructure.client.UsuarioClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -76,6 +77,9 @@ public class UsuarioService {
 
 
 
+    public ViaCepDTOResponse buscarEnderecoPorCep(String cep) {
+        return client.buscarDadosCep(cep);
+    }
 
 
 }
