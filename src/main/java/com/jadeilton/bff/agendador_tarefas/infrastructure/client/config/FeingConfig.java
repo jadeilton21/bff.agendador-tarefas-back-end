@@ -11,7 +11,7 @@ public class FeingConfig {
 
 
     @Bean
-    public FeingError feingError(){
-        return new FeingError();
+    public FeignError feingError(){
+        return new FeignError();
     }
 }
